@@ -1,0 +1,6 @@
+service:
+  name: fb-chatbot
+  description: A microservice to manage fb chat and conversations
+  baseUrl: /api/chat
+  apiVersion: 0.1.0
+  docsBaseUrl: /docs/chat
