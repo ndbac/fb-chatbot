@@ -7,6 +7,11 @@ export function initializeSwaggerDoc(app: INestApplication) {
     .setTitle(config.get<string>('service.name'))
     .setDescription(config.get<string>('service.description'))
     .setVersion(config.get<string>('service.apiVersion'))
+    .addServer(
+      `https://facebookchatbot-metasec.herokuapp.com${config.get(
+        'service.baseUrl',
+      )}`,
+    )
     .addServer(`http://localhost:3000${config.get('service.baseUrl')}`)
     .addSecurity('x-zp-auth-provider', {
       type: 'apiKey',
